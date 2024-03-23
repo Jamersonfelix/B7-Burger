@@ -140,9 +140,46 @@ header .menu-icon div{
     opacity: 0.8;
 }
 
-
-
-
+/* criando o SEARCH*/
+.search {
+   background-color: #1f1f1f; 
+   padding: 80px 0;
+   margin-top: -100px;
+}
+.search .title{
+    font-size: 32px;
+    font-weight: 500;
+}
+.search .sides{
+    display: flex;
+    margin-top: 30px;
+    gap: 100px;
+}
+.search .leftside,
+.search .rightside{
+    flex: 1;
+}
+.search input,
+.search select{
+    width: 100%;
+    background-color: #282828;
+    color: #fff;
+    font-size: 24px;
+    outline: none;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+}
+/*colocando a lupa no imput*/
+.search input{
+    background-image: url(/assets/images/searchIcon.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    padding-left: 60px;
+}
+.search select{
+    border-right: 20px solid transparent;
+}
 
 
 
@@ -190,5 +227,16 @@ header .menu-icon div{
     .hero h1 {
         font-size: 44px;
         line-height: 50px;
+    }
+    /* deixando o SEARCH responsivo*/
+    .search{
+        padding-bottom: 30px;
+    }
+    .search .title{
+        text-align: center;
+    }
+    .search .sides{
+        flex-direction: column;
+        gap: 20px;
     }
 }
