@@ -1,5 +1,6 @@
 /* reportanto as fontes que serão usadas no sites (Calistoga e Inter)*/
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@100..900&display=swap');
+
 /* estruturando geral o site*/
 *{
     margin: 0;
@@ -8,6 +9,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* definindo um pre-padrão no site*/
 body{
     font-family: 'inter';
@@ -15,6 +17,7 @@ body{
     background-color: #141414;
     color: #fff;
 }
+
 /* definindo as estrutura de marge do site*/
 .container {
     width: 100%;
@@ -22,6 +25,7 @@ body{
     max-width: 1200px;
     padding: 0 20px;
 }
+
 /* criando a logo*/
 .logo a {
     font-family: 'Calistoga';
@@ -31,4 +35,75 @@ body{
 }
 .logo a span{
     color: #fe6a0f;
+}
+
+/* criando o HEADER */
+header .container{
+    display: flex;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    gap: 50px;
+}
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+header nav .leftside{
+    display: flex;
+    flex: 1;
+}
+header nav li{
+    margin: 0 30px;
+}
+header nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+header nav li a:hover{
+    color: #999;
+}
+
+/* criando o botão "fazer pedido"*/
+header nav .button {
+    display: block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+header nav .button:hover{
+    color: #999;
+    border-color: #999;
+}
+
+/* criando o icone menu */
+header .menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+header .menu-icon{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+header .menu-icon div{
+    height: 6px;
+    background-color: #fff;
+}
+
+/*deixando o header responvivel para celular*/
+@media (max-width: 820px){
+    header nav {
+        display: none;
+    }
+    header .menu{
+        display: flex;
+    }
 }
